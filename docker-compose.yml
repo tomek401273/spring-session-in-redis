@@ -1,0 +1,18 @@
+version: "3"
+services:
+  redis-server:
+    image: 'redis'
+    networks:
+        - webnet
+  web:
+    image: tomek371240/session:3
+    deploy:
+      replicas: 4
+      restart_policy:
+        condition: on-failure
+    ports:
+        - "8080:8080"
+    networks:
+        - webnet
+networks:
+  webnet:
