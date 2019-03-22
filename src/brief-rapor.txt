@@ -1,7 +1,0 @@
-I tried to connect to redis in docker working in docker swarm
-Today I failed.
-Nevertheless run two instances od spring app in containers and one of redis in container
-with docker-compose works
-Tomorrow I wll try it again
-I try connect with command line from spring container and check the port
-I will change the port in application properties
