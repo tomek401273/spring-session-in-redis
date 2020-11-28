@@ -20,7 +20,11 @@ dependencies {
     testImplementation 'org.springframework.security:spring-security-test'
 
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    compile 'org.springframework.boot:spring-boot-starter-jdbc'
     compile 'org.springframework.session:spring-session-core'
-    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
-    implementation 'org.springframework.session:spring-session-data-redis'
+    compile 'org.springframework.session:spring-session-jdbc'
+    compile group: 'org.postgresql', name: 'postgresql'
+//    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+//    implementation 'org.springframework.session:spring-session-data-redis'
 }
+

@@ -23,6 +23,7 @@ public class SpringSessionController {
         if (messages == null) {
             messages = new ArrayList<>();
         }
+
         model.addAttribute("sessionMessages", messages);
         model.addAttribute("sessionId", session.getId());
 

@@ -34,7 +34,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     // tag::config[]
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
+        // with csrf we have 2 rows per user
+        http.csrf().disable()
                 .authorizeRequests()
                 .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                 .anyRequest().authenticated()
